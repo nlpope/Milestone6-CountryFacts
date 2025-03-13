@@ -9,10 +9,16 @@ import UIKit
 
 class homeVC: UITableViewController
 {
-    var facts = [String: [String]]()
+    var countryArray = [CountryItem]()
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+    }
+    
+    
+    func fetchCountryArray()
+    {
+        
     }
 }

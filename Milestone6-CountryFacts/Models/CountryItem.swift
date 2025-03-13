@@ -9,17 +9,34 @@ import UIKit
 
 struct CountryItems: Codable
 {
-    var results: [CountryItem]
+    let results: [CountryItem]
 }
 
 struct CountryItem: Codable
 {
-    let name: String
+    let name: Name
     let capital: String
     let currency: String
     let size: Double
     let population: Double
-    let imageName: String
-    var facts = [String]()
-    // look for the facts using the name then access a json containing it
+    let flagImageName: String
+    
+    enum CodingKeys: String, CodingKey
+    {
+        case name
+        case capital
+        case currency
+        case size       = "area"
+        case population
+        case flagImageName
+    }
 }
+
+
+struct Name: Codable
+{
+    var common: String
+    var official: String
+}
+
+#warning("model after comixorg's Publisher model to access response's deeper cuts using CodingKeys")

@@ -40,4 +40,11 @@ class DetailVC: UITableViewController
     {
         title = countryItem.name
     }
+    
+    
+    //-------------------------------------//
+    // MARK: TABLEVIEW DELEGATE & DATASOURCE METHODS
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
 }
