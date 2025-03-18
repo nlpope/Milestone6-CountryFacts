@@ -19,6 +19,11 @@ class homeVC: UITableViewController
     
     func fetchCountryArray()
     {
-        
+        NetworkManager.getCountries()
+        tableView.reloadData()
     }
+    
+    
+    //-------------------------------------//
+    // MARK: TABLEVIEW DELEGATE & DATASOURCE METHODS
 }

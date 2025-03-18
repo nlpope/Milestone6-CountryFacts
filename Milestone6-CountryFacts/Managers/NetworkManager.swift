@@ -7,4 +7,23 @@
 
 import Foundation
 
-
+enum NetworkManager
+{
+    static func getCountries()
+    {
+        
+    }
+    
+    
+    static func parseJSON(json: Data) -> [CountryItem]
+    {
+        var countryArray        = [CountryItem]()
+        let decoder             = JSONDecoder()
+        
+        if let jsonCountries    = try? decoder.decode(CountryItems.self, from: json) {
+            countryArray = jsonCountries.results
+        }
+        
+        return countryArray
+    }
+}
