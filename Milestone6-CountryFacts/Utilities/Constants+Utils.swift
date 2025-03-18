@@ -11,4 +11,5 @@ enum Identifiers
 {
     static let countryCell  = "CountryCell"
     static let detailVC     = "DetailVC"
+    static let factsCell    = "FactsCell"
 }

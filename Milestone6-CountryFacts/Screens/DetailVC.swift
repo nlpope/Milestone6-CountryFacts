@@ -11,12 +11,12 @@
 
 import UIKit
 
-class DetailVC: UIViewController
+class DetailVC: UIViewController, UITableViewDelegate & UITableViewDataSource
 {
+    @IBOutlet var flagImageView: UIImageView!
+    @IBOutlet var countryFactsTableView: UITableView!
     var countryItem: CountryItem
-    var flagImageView: UIImageView
     var factsTableView: UITableView // return 4 slots for facts
-    var countryFactsTableView = UITableView()
     
     internal static func instantiate(withCountryItem countryItem: CountryItem) -> DetailVC
     {
@@ -46,12 +46,29 @@ class DetailVC: UIViewController
     
     func configureTableView()
     {
-        view.addSubview(countryFactsTableView)
-        
+        countryFactsTableView.delegate      = self
+        countryFactsTableView.dataSource    = self
+        countryFactsTableView.removeExcessCells()
     }
     
     //-------------------------------------//
     // MARK: TABLEVIEW DELEGATE & DATASOURCE METHODS
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 4
+    }
     
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.factsCell)!
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        print("selected")
+    }
 }

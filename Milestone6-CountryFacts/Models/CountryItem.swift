@@ -8,10 +8,7 @@
 import UIKit
 
 /**api = https://restcountries.com/v3.1/all**/
-struct CountryItems: Codable
-{
-    let results: [CountryItem]
-}
+struct CountryItems: Codable { let results: [CountryItem] }
 
 struct CountryItem: Codable
 {

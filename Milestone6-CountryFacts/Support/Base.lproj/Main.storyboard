@@ -18,20 +18,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CountryCell" id="TzA-TG-qSN">
-                                <rect key="frame" x="0.0" y="50" width="393" height="54.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="55.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TzA-TG-qSN" id="lcl-da-2Gf">
-                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="54.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="55.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W5v-ka-sEC">
-                                            <rect key="frame" x="20" y="7" width="56" height="40.666666666666664"/>
+                                            <rect key="frame" x="20" y="7" width="56" height="41.333333333333336"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="56" id="9s5-RT-QBX"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJM-j6-9Om">
-                                            <rect key="frame" x="90" y="17" width="244" height="20.666666666666671"/>
+                                            <rect key="frame" x="90" y="17" width="244" height="21.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -91,6 +91,10 @@
                         <viewLayoutGuide key="safeArea" id="IIL-td-WLx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="countryFactsTableView" destination="nne-9g-XJP" id="5hx-qq-Lc7"/>
+                        <outlet property="flagImageView" destination="SFc-b0-mbO" id="heb-cf-mlz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xL-y0-aul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

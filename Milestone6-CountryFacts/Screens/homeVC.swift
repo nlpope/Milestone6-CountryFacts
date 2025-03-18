@@ -4,6 +4,9 @@
 //
 //  Created by Noah Pope on 3/12/25.
 //
+/**
+ initializing VC when storyboard is in use: https://stackoverflow.com/questions/30449137/custom-init-of-uiviewcontroller-from-storyboard
+ */
 
 import UIKit
 
@@ -14,12 +17,13 @@ class homeVC: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        fetchCountryArray()
     }
     
     
     func fetchCountryArray()
     {
-        countryArray = APICaller.shared.getCountries()
+        countryArray = try! await APICaller.shared.getCountries()
         tableView.reloadData()
     }
     
@@ -41,9 +45,5 @@ class homeVC: UITableViewController
         let countryItem = countryArray[indexPath.row]
         navigationController?.pushViewController(DetailVC.instantiate(withCountryItem: countryItem), animated: true)
         
-//        if let vc = storyboard?.instantiateViewController(withIdentifier: Identifiers.detailVC) as? DetailVC {
-//            vc.countryItem  = country
-//            navigationController?.pushViewController(vc, animated: true)
-//        }
     }
 }

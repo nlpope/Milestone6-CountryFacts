@@ -18,6 +18,7 @@
 		40C88D542D827B020056A65E /* CountryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D532D827B020056A65E /* CountryItem.swift */; };
 		40C88D562D827DAE0056A65E /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D552D827DAE0056A65E /* DetailVC.swift */; };
 		40C88D5C2D8349230056A65E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D5B2D8349230056A65E /* APICaller.swift */; };
+		40C88D672D891F110056A65E /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D662D891F100056A65E /* UITableView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		40C88D532D827B020056A65E /* CountryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItem.swift; sourceTree = "<group>"; };
 		40C88D552D827DAE0056A65E /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		40C88D5B2D8349230056A65E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		40C88D662D891F100056A65E /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -129,6 +131,7 @@
 		40C88D442D8276360056A65E /* Milestone6-CountryFacts */ = {
 			isa = PBXGroup;
 			children = (
+				40C88D652D891EF50056A65E /* Extensions */,
 				40C88D5A2D8349080056A65E /* Managers */,
 				40C88D4F2D827A600056A65E /* Utilities */,
 				40C88D522D827AEC0056A65E /* Models */,
@@ -170,6 +173,14 @@
 				40C88D5B2D8349230056A65E /* APICaller.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		40C88D652D891EF50056A65E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				40C88D662D891F100056A65E /* UITableView+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +330,7 @@
 				40C88D4A2D8276360056A65E /* AppDelegate.swift in Sources */,
 				40C88D4B2D8276360056A65E /* SceneDelegate.swift in Sources */,
 				40C88D4C2D8276360056A65E /* Milestone6_CountryFacts.xcdatamodeld in Sources */,
+				40C88D672D891F110056A65E /* UITableView+Ext.swift in Sources */,
 				40C88D512D827A760056A65E /* Constants+Utils.swift in Sources */,
 				40C88D5C2D8349230056A65E /* APICaller.swift in Sources */,
 				40C88D542D827B020056A65E /* CountryItem.swift in Sources */,
