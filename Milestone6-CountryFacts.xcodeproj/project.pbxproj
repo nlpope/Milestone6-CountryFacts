@@ -17,7 +17,7 @@
 		40C88D512D827A760056A65E /* Constants+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D502D827A760056A65E /* Constants+Utils.swift */; };
 		40C88D542D827B020056A65E /* CountryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D532D827B020056A65E /* CountryItem.swift */; };
 		40C88D562D827DAE0056A65E /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D552D827DAE0056A65E /* DetailVC.swift */; };
-		40C88D5C2D8349230056A65E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D5B2D8349230056A65E /* NetworkManager.swift */; };
+		40C88D5C2D8349230056A65E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D5B2D8349230056A65E /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		40C88D502D827A760056A65E /* Constants+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Utils.swift"; sourceTree = "<group>"; };
 		40C88D532D827B020056A65E /* CountryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItem.swift; sourceTree = "<group>"; };
 		40C88D552D827DAE0056A65E /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
-		40C88D5B2D8349230056A65E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		40C88D5B2D8349230056A65E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -167,7 +167,7 @@
 		40C88D5A2D8349080056A65E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				40C88D5B2D8349230056A65E /* NetworkManager.swift */,
+				40C88D5B2D8349230056A65E /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -320,7 +320,7 @@
 				40C88D4B2D8276360056A65E /* SceneDelegate.swift in Sources */,
 				40C88D4C2D8276360056A65E /* Milestone6_CountryFacts.xcdatamodeld in Sources */,
 				40C88D512D827A760056A65E /* Constants+Utils.swift in Sources */,
-				40C88D5C2D8349230056A65E /* NetworkManager.swift in Sources */,
+				40C88D5C2D8349230056A65E /* APICaller.swift in Sources */,
 				40C88D542D827B020056A65E /* CountryItem.swift in Sources */,
 				40C88D4D2D8276360056A65E /* homeVC.swift in Sources */,
 				40C88D562D827DAE0056A65E /* DetailVC.swift in Sources */,

@@ -40,4 +40,3 @@ struct Name: Codable
     var official: String
 }
 
-#warning("model after comixorg's Publisher model to access response's deeper cuts using CodingKeys")

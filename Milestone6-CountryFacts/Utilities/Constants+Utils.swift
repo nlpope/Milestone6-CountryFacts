@@ -9,5 +9,6 @@ import UIKit
 
 enum Identifiers
 {
-    static let countryCell = "CountryCell"
+    static let countryCell  = "CountryCell"
+    static let detailVC     = "DetailVC"
 }
