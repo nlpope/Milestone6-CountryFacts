@@ -19,6 +19,7 @@
 		40C88D562D827DAE0056A65E /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D552D827DAE0056A65E /* DetailVC.swift */; };
 		40C88D5C2D8349230056A65E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D5B2D8349230056A65E /* APICaller.swift */; };
 		40C88D672D891F110056A65E /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D662D891F100056A65E /* UITableView+Ext.swift */; };
+		40C88D692D895F720056A65E /* CFError+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C88D682D895F720056A65E /* CFError+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		40C88D552D827DAE0056A65E /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		40C88D5B2D8349230056A65E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		40C88D662D891F100056A65E /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		40C88D682D895F720056A65E /* CFError+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CFError+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				40C88D502D827A760056A65E /* Constants+Utils.swift */,
+				40C88D682D895F720056A65E /* CFError+Utils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				40C88D4A2D8276360056A65E /* AppDelegate.swift in Sources */,
 				40C88D4B2D8276360056A65E /* SceneDelegate.swift in Sources */,
 				40C88D4C2D8276360056A65E /* Milestone6_CountryFacts.xcdatamodeld in Sources */,
+				40C88D692D895F720056A65E /* CFError+Utils.swift in Sources */,
 				40C88D672D891F110056A65E /* UITableView+Ext.swift in Sources */,
 				40C88D512D827A760056A65E /* Constants+Utils.swift in Sources */,
 				40C88D5C2D8349230056A65E /* APICaller.swift in Sources */,

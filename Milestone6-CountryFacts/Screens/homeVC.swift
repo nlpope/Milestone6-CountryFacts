@@ -18,12 +18,14 @@ class homeVC: UITableViewController
     {
         super.viewDidLoad()
         fetchCountryArray()
+        view.backgroundColor = .systemRed
     }
     
     
     func fetchCountryArray()
     {
-        countryArray = try! await APICaller.shared.getCountries()
+        Task { countryArray = try! await APICaller.shared.fetchCountries() }
+        print("payload = \(countryArray)")
         tableView.reloadData()
     }
     
@@ -31,19 +33,25 @@ class homeVC: UITableViewController
     //-------------------------------------//
     // MARK: TABLEVIEW DELEGATE & DATASOURCE METHODS
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return countryArray.count
     }
     
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell    = tableView.dequeueReusableCell(withIdentifier: Identifiers.countryCell, for: indexPath)
+        let country = countryArray[indexPath.row]
+        cell.textLabel?.text    = country.name.common
+        
+        return cell
     }
     
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         let countryItem = countryArray[indexPath.row]
         navigationController?.pushViewController(DetailVC.instantiate(withCountryItem: countryItem), animated: true)
-        
     }
 }

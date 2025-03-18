@@ -8,34 +8,36 @@
 
 import UIKit
 
-enum CFError: String, Error
-{
-    case invalidURL = "The URL passed is invalid"
-}
-
-#warning("having issues w APICaller and calling an async func in homeVC's fetchCountryArray")
-
 class APICaller
 {
     static let shared       = APICaller()
     let baseURLString       = "https://restcountries.com/v3.1/all"
     var countryArray        = [CountryItem]()
     
-    func getCountries() async throws -> [CountryItem]
+    func fetchCountries() async throws -> [CountryItem]
     {
         guard let url   = URL(string: baseURLString) else { throw CFError.invalidURL}
         let (data, _)   = try await URLSession.shared.data(from: url)
-        parseJSON(json: data)
+        
+        let decoder             = JSONDecoder()
+        guard let decodedJSON   = try? decoder.decode(CountryItems.self, from: data)
+        else { throw CFError.failedToGetData }
+        
+        countryArray = decodedJSON.results
+        print("countryarray = \(countryArray)")
+        
+//        parseJSON(json: data)
         return countryArray
     }
     
     
-    func parseJSON(json: Data)
-    {
-        let decoder             = JSONDecoder()
-        
-        if let decodedJSON    = try? decoder.decode(CountryItems.self, from: json) {
-            countryArray = decodedJSON.results
-        }
-    }
+//    func parseJSON(json: Data)
+//    {
+//        let decoder             = JSONDecoder()
+//        
+//        if let decodedJSON    = try? decoder.decode(CountryItems.self, from: json) {
+//            countryArray = decodedJSON.results
+//            print("decoded countryArray = \(countryArray)")
+//        }
+//    }
 }
