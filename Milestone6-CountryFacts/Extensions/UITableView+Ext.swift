@@ -1,9 +1,6 @@
-//
-//  UITableView+Ext.swift
-//  Milestone6-CountryFacts
-//
-//  Created by Noah Pope on 3/17/25.
-//
+//  File: UITableView+Ext.swift
+//  Project: Milestone6-CountryFacts
+//  Created by: Noah Pope on 3/17/25.
 
 import UIKit
 

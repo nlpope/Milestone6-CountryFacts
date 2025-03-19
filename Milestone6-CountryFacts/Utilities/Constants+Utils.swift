@@ -1,9 +1,6 @@
-//
-//  Constants+Utils.swift
-//  Milestone6-CountryFacts
-//
-//  Created by Noah Pope on 3/12/25.
-//
+//  File: Constants+Utils.swift
+//  Project: Milestone6-CountryFacts
+//  Created by: Noah Pope on 3/12/25.
 
 import UIKit
 

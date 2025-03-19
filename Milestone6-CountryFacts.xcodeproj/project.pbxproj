@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40B572C52D8B1ADA008823B8 /* CFCountryFactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B572C42D8B1ADA008823B8 /* CFCountryFactCell.swift */; };
+		40B572C72D8B1BA7008823B8 /* CFCountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B572C62D8B1BA7008823B8 /* CFCountryCell.swift */; };
 		40C88D462D8276360056A65E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C88D3A2D8276360056A65E /* Assets.xcassets */; };
 		40C88D482D8276360056A65E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C88D3F2D8276360056A65E /* LaunchScreen.storyboard */; };
 		40C88D492D8276360056A65E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C88D412D8276360056A65E /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40B572C42D8B1ADA008823B8 /* CFCountryFactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFCountryFactCell.swift; sourceTree = "<group>"; };
+		40B572C62D8B1BA7008823B8 /* CFCountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFCountryCell.swift; sourceTree = "<group>"; };
 		40C88CFB2D8275990056A65E /* Milestone6-CountryFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milestone6-CountryFacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C88D142D82759D0056A65E /* Milestone6-CountryFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Milestone6-CountryFactsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C88D1E2D82759D0056A65E /* Milestone6-CountryFactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Milestone6-CountryFactsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40B572C32D8B1AB2008823B8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				40B572C42D8B1ADA008823B8 /* CFCountryFactCell.swift */,
+				40B572C62D8B1BA7008823B8 /* CFCountryCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		40C88CF22D8275990056A65E = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +150,7 @@
 				40C88D5A2D8349080056A65E /* Managers */,
 				40C88D4F2D827A600056A65E /* Utilities */,
 				40C88D522D827AEC0056A65E /* Models */,
+				40B572C32D8B1AB2008823B8 /* CustomViews */,
 				40C88D4E2D8276670056A65E /* Screens */,
 				40C88D3C2D8276360056A65E /* Support */,
 				40C88D3D2D8276360056A65E /* Info.plist */,
@@ -335,7 +349,9 @@
 				40C88D4C2D8276360056A65E /* Milestone6_CountryFacts.xcdatamodeld in Sources */,
 				40C88D692D895F720056A65E /* CFError+Utils.swift in Sources */,
 				40C88D672D891F110056A65E /* UITableView+Ext.swift in Sources */,
+				40B572C52D8B1ADA008823B8 /* CFCountryFactCell.swift in Sources */,
 				40C88D512D827A760056A65E /* Constants+Utils.swift in Sources */,
+				40B572C72D8B1BA7008823B8 /* CFCountryCell.swift in Sources */,
 				40C88D5C2D8349230056A65E /* APICaller.swift in Sources */,
 				40C88D542D827B020056A65E /* CountryItem.swift in Sources */,
 				40C88D4D2D8276360056A65E /* homeVC.swift in Sources */,
