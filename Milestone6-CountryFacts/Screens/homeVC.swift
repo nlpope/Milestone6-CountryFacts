@@ -1,8 +1,10 @@
 //  File: homeVC.swift
 //  Project: Milestone6-CountryFacts
 //  Created by: Noah Pope on 3/12/25.
+
 /**
- initializing VC when storyboard is in use: https://stackoverflow.com/questions/30449137/custom-init-of-uiviewcontroller-from-storyboard
+ initializing VC when storyboard is in use:
+ https://stackoverflow.com/questions/30449137/custom-init-of-uiviewcontroller-from-storyboard
  */
 
 import UIKit

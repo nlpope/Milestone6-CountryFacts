@@ -45,7 +45,6 @@ class APICaller
         catch { print("Error in JSON parsing = \(error)") }
         
         countryArray = decodedJSON
-//        print("decoded countryArray = \(countryArray)")
         return countryArray
     }
 }
