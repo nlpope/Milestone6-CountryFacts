@@ -19,7 +19,12 @@ class homeVC: UITableViewController
     
     func fetchCountryArray()
     {
-        countryArray = APICaller.shared.fetchSomething()
+        countryArray = APICaller.shared.fetchSomething() { [weak self] result in
+            switch result {
+            case .success(let data):
+                countryArray = APICaller.shared.parseJSON(jsonData: data)
+            }
+        }
         print("payload = \(countryArray)")
         tableView.reloadData()
     }
