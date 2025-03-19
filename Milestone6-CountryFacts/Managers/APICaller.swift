@@ -1,10 +1,11 @@
-//
 //  APICaller.swift
 //  Milestone6-CountryFacts
-//
 //  Created by Noah Pope on 3/13/25.
-//
-/** API Site: https://restcountries.com/ */
+//  API Site: https://restcountries.com/
+/**
+ unlike URLSession.shared.data(from: url),
+ ...dataTask(with: url) does not throw & accounts for erros more cleanly in completion
+ **/
 
 import UIKit
 
@@ -14,30 +15,33 @@ class APICaller
     let baseURLString       = "https://restcountries.com/v3.1/all"
     var countryArray        = [CountryItem]()
     
-    func fetchCountries() async throws -> [CountryItem]
+    
+    
+    func fetchSomething() -> [CountryItem]
     {
-        guard let url   = URL(string: baseURLString) else { throw CFError.invalidURL}
-        let (data, _)   = try await URLSession.shared.data(from: url)
+        guard let url   = URL(string: baseURLString) else { return countryArray }
         
-        let decoder             = JSONDecoder()
-        guard let decodedJSON   = try? decoder.decode(CountryItems.self, from: data)
-        else { throw CFError.failedToGetData }
+        #warning("this is accessed too late")
+        let dataTask    = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error == nil && data !=  nil { self.parseJSON(jsonData: data!) }
+            else { print("data = \(String(describing: data)) \n error = \(String(describing: error))") }
+        }
         
-        countryArray = decodedJSON.results
-        print("countryarray = \(countryArray)")
-        
-//        parseJSON(json: data)
+        dataTask.resume()
         return countryArray
     }
     
     
-//    func parseJSON(json: Data)
-//    {
-//        let decoder             = JSONDecoder()
-//        
-//        if let decodedJSON    = try? decoder.decode(CountryItems.self, from: json) {
-//            countryArray = decodedJSON.results
-//            print("decoded countryArray = \(countryArray)")
-//        }
-//    }
+    func parseJSON(jsonData: Data)
+    {
+        print("accessing parse JSON")
+        var decodedJSON = [CountryItem]()
+        let decoder = JSONDecoder()
+        
+        do { decodedJSON = try decoder.decode([CountryItem].self, from: jsonData) }
+        catch { print("Error in JSON parsing = \(error)") }
+        
+        countryArray = decodedJSON
+        print("decoded countryArray = \(countryArray)")
+    }
 }

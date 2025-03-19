@@ -1,9 +1,6 @@
-//
 //  DetailVC.swift
 //  Milestone6-CountryFacts
-//
 //  Created by Noah Pope on 3/12/25.
-//
 /**
  this 1st designated init is resp. for calling the super (UITableViewController)'s init after setting countryItem
  the 2nd required init is for the storyboard
@@ -41,7 +38,7 @@ class DetailVC: UIViewController, UITableViewDelegate & UITableViewDataSource
     }
     
     
-    func setUpNavigation() { title = countryItem.name.common }
+    func setUpNavigation() { /*title = countryItem.name.common*/ }
     
     
     func configureTableView()
