@@ -6,5 +6,5 @@ import UIKit
 
 class CFCountryFactCell: UITableViewCell
 {
-    
+
 }

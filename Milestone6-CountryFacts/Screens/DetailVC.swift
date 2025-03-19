@@ -59,7 +59,7 @@ class DetailVC: UIViewController, UITableViewDelegate & UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.factsCell)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.CFCountryFactsCell)!
         return cell
     }
     

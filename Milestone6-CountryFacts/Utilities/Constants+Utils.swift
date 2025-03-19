@@ -6,7 +6,12 @@ import UIKit
 
 enum Identifiers
 {
-    static let countryCell  = "CountryCell"
-    static let detailVC     = "DetailVC"
-    static let factsCell    = "FactsCell"
+    static let CFCountryCell        = "CFCountryCell"
+    static let CFCountryFactsCell   = "CFCountryFactsCell"
+    static let detailVC             = "DetailVC"
+}
+
+enum Images
+{
+    static let defaultFlag  = "blankFlag"
 }

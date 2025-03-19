@@ -15,7 +15,14 @@ class homeVC: UITableViewController
     {
         super.viewDidLoad()
         fetchCountryArray()
-        view.backgroundColor = .systemRed
+        configureNavigation()
+    }
+    
+    
+    func configureNavigation()
+    {
+        view.backgroundColor    = .systemBackground
+        title                   = "COUNTRIES"
     }
     
     
@@ -46,15 +53,20 @@ class homeVC: UITableViewController
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell    = tableView.dequeueReusableCell(withIdentifier: Identifiers.countryCell, for: indexPath)
-        let country = countryArray[indexPath.row]
-        cell.textLabel?.text    = country.name?.common ?? "Unknown"
+        let cell                = tableView.dequeueReusableCell(withIdentifier: Identifiers.CFCountryCell, for: indexPath) as! CFCountryCell
+        let country             = countryArray[indexPath.row]
+        let flagImageUrlString  = country.flagImageName?.png
         
+        if flagImageUrlString != nil { cell.countryImageView.load(urlString: flagImageUrlString!) }
+        else { cell.countryImageView.image = UIImage(named: Images.defaultFlag) }
+        cell.countryLabel?.text = country.name?.common ?? "Unknown"
+        tableView.rowHeight = CGFloat(75)
         
         return cell
     }
     
     
+    #warning("up next, push vc w image and facts")
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let countryItem = countryArray[indexPath.row]

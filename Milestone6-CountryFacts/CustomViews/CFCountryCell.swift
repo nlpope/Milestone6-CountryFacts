@@ -5,5 +5,6 @@
 import UIKit
 
 class CFCountryCell: UITableViewCell {
-
+    @IBOutlet weak var countryImageView: UIImageView!
+    @IBOutlet weak var countryLabel: UILabel!
 }
