@@ -5,6 +5,12 @@
 
 import UIKit
 
+/**
+ Instead of using Sean Allen's CountryResult: [CountryItem] method
+ ... I'm just declaring the singular type here and acccounting for the payload being an array
+ ... by puting 'decoder.decode([CountryItem].self, from: jsonData)' in the APICaller
+ */
+
 struct CountryItem: Codable
 {
     var name: Name?
@@ -12,7 +18,6 @@ struct CountryItem: Codable
     var size: Double?
     var population: Double?
     var flagImageName: Flag?
-    var currency: Currency?
     
     private enum CodingKeys: String, CodingKey
     {
@@ -21,7 +26,6 @@ struct CountryItem: Codable
         case size           = "area"
         case population
         case flagImageName  = "flags"
-        case currency       = "currencies"
     }
 }
 
@@ -33,10 +37,9 @@ struct Name: Codable
 }
 
 
-struct Currency: Codable
+struct Shp: Codable
 {
-    let firstKey = Array()
-    var coinName:
+    let name, symbol: String
 }
 
 

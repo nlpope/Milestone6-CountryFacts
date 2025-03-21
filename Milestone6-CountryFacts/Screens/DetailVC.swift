@@ -63,7 +63,7 @@ class DetailVC: UIViewController, UITableViewDelegate & UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 4
+        return 3
     }
     
     
@@ -82,9 +82,6 @@ class DetailVC: UIViewController, UITableViewDelegate & UITableViewDataSource
         case 2:
             cell.textLabel?.text        = "Population"
             cell.detailTextLabel?.text  = String(country.population ?? 0.0)
-        case 3:
-            cell.textLabel?.text        = "Currency"
-            cell.detailTextLabel?.text  = country.currency
         default:
             cell.textLabel?.text        = "Other info"
             cell.detailTextLabel?.text  = "Unknown"
