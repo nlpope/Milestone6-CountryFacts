@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40B572C52D8B1ADA008823B8 /* CFCountryFactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B572C42D8B1ADA008823B8 /* CFCountryFactCell.swift */; };
+		40B572C52D8B1ADA008823B8 /* CFCountryFactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B572C42D8B1ADA008823B8 /* CFCountryFactsCell.swift */; };
 		40B572C72D8B1BA7008823B8 /* CFCountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B572C62D8B1BA7008823B8 /* CFCountryCell.swift */; };
 		40B572CF2D8B253F008823B8 /* UIImageView+EXt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B572CE2D8B253F008823B8 /* UIImageView+EXt.swift */; };
 		40C88D462D8276360056A65E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C88D3A2D8276360056A65E /* Assets.xcassets */; };
@@ -43,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40B572C42D8B1ADA008823B8 /* CFCountryFactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFCountryFactCell.swift; sourceTree = "<group>"; };
+		40B572C42D8B1ADA008823B8 /* CFCountryFactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFCountryFactsCell.swift; sourceTree = "<group>"; };
 		40B572C62D8B1BA7008823B8 /* CFCountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFCountryCell.swift; sourceTree = "<group>"; };
 		40B572CE2D8B253F008823B8 /* UIImageView+EXt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+EXt.swift"; sourceTree = "<group>"; };
 		40C88CFB2D8275990056A65E /* Milestone6-CountryFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milestone6-CountryFacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				40B572C62D8B1BA7008823B8 /* CFCountryCell.swift */,
-				40B572C42D8B1ADA008823B8 /* CFCountryFactCell.swift */,
+				40B572C42D8B1ADA008823B8 /* CFCountryFactsCell.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -353,7 +353,7 @@
 				40C88D4C2D8276360056A65E /* Milestone6_CountryFacts.xcdatamodeld in Sources */,
 				40C88D692D895F720056A65E /* CFError+Utils.swift in Sources */,
 				40C88D672D891F110056A65E /* UITableView+Ext.swift in Sources */,
-				40B572C52D8B1ADA008823B8 /* CFCountryFactCell.swift in Sources */,
+				40B572C52D8B1ADA008823B8 /* CFCountryFactsCell.swift in Sources */,
 				40C88D512D827A760056A65E /* Constants+Utils.swift in Sources */,
 				40B572C72D8B1BA7008823B8 /* CFCountryCell.swift in Sources */,
 				40C88D5C2D8349230056A65E /* APICaller.swift in Sources */,

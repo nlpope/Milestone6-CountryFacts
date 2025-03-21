@@ -12,6 +12,7 @@ struct CountryItem: Codable
     var size: Double?
     var population: Double?
     var flagImageName: Flag?
+    var currency: Currency?
     
     private enum CodingKeys: String, CodingKey
     {
@@ -20,6 +21,7 @@ struct CountryItem: Codable
         case size           = "area"
         case population
         case flagImageName  = "flags"
+        case currency       = "currencies"
     }
 }
 
@@ -28,6 +30,13 @@ struct Name: Codable
 {
     var common: String
     var official: String
+}
+
+
+struct Currency: Codable
+{
+    let firstKey = Array()
+    var coinName:
 }
 
 

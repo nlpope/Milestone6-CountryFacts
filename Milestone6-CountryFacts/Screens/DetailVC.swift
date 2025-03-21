@@ -2,7 +2,7 @@
 //  Project: Milestone6-CountryFacts
 //  Created by: Noah Pope on 3/12/25.
 /**
- this 1st designated init is resp. for calling the super (UITableViewController)'s init after setting countryItem
+ this 1st designated init is resp. for calling the super (UITableViewController)'s init after setting country
  the 2nd required init is for the storyboard
  **/
 
@@ -12,18 +12,19 @@ class DetailVC: UIViewController, UITableViewDelegate & UITableViewDataSource
 {
     @IBOutlet var flagImageView: UIImageView!
     @IBOutlet var countryFactsTableView: UITableView!
-    var countryItem: CountryItem
-    var factsTableView: UITableView // return 4 slots for facts
+    var country: CountryItem!
+    var factsTableView: UITableView!
     
     internal static func instantiate(withCountryItem countryItem: CountryItem) -> DetailVC
     {
         let vc          = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Identifiers.detailVC) as! DetailVC
-        vc.countryItem  = countryItem
+        vc.country  = countryItem
         return vc
     }
 
     
-    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    required init?(coder: NSCoder) { super.init(coder: coder) }
+    
     
     deinit { print("deinitializing DetailVC") }
     
@@ -34,11 +35,20 @@ class DetailVC: UIViewController, UITableViewDelegate & UITableViewDataSource
     {
         super.viewDidLoad()
         setUpNavigation()
+        configureFlag()
         configureTableView()
     }
     
     
-    func setUpNavigation() { /*title = countryItem.name.common*/ }
+    func setUpNavigation() { title = country.name?.common ?? "Unknown"}
+    
+    
+    func configureFlag()
+    {
+        let flagImageUrlString  = country.flagImageName?.png
+        if flagImageUrlString != nil { flagImageView.load(urlString: flagImageUrlString!) }
+        else { flagImageView.image  = UIImage(named: Images.defaultFlag) }
+    }
     
     
     func configureTableView()
@@ -59,7 +69,27 @@ class DetailVC: UIViewController, UITableViewDelegate & UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.CFCountryFactsCell)!
+        let cell    = tableView.dequeueReusableCell(withIdentifier: Identifiers.CFCountryFactsCell)!
+        
+        switch indexPath.row
+        {
+        case 0:
+            cell.textLabel?.text        = "Capital"
+            cell.detailTextLabel?.text  = country.capital?[0] ?? "unknown"
+        case 1:
+            cell.textLabel?.text        = "Size"
+            cell.detailTextLabel?.text  = String(country.size ?? 0.0)
+        case 2:
+            cell.textLabel?.text        = "Population"
+            cell.detailTextLabel?.text  = String(country.population ?? 0.0)
+        case 3:
+            cell.textLabel?.text        = "Currency"
+            cell.detailTextLabel?.text  = country.currency
+        default:
+            cell.textLabel?.text        = "Other info"
+            cell.detailTextLabel?.text  = "Unknown"
+        }
+        
         return cell
     }
     

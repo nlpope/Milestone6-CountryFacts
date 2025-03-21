@@ -38,7 +38,6 @@ class homeVC: UITableViewController
                 print(error.rawValue)
                 
             }
-            print("payload = \(self?.countryArray ?? [CountryItem]())")
             DispatchQueue.main.async { self?.tableView.reloadData() }
         }
     }
@@ -68,7 +67,6 @@ class homeVC: UITableViewController
     }
     
     
-    #warning("up next, push vc w image and facts")
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let countryItem = countryArray[indexPath.row]
