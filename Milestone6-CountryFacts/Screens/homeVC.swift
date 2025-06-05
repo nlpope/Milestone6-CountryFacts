@@ -8,18 +8,42 @@
  */
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class homeVC: UITableViewController
 {
     var countryArray = [CountryItem]()
+    var logoLauncher: CFLogoLauncher!
+    var player = AVPlayer()
+
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        fetchCountryArray()
+        PersistenceManager.isFirstVisitStatus = true
         configureNavigation()
     }
     
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        logoLauncher = CFLogoLauncher(targetVC: self)
+        if PersistenceManager.fetchFirstVisitStatus() {
+            logoLauncher.configLogoLauncher()
+        } else {
+            fetchCountryArray()
+        }
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) { logoLauncher = nil }
+    
+    
+    deinit { logoLauncher.removeAllAVPlayerLayers() }
+    
+    //-------------------------------------//
+    // MARK: - CONFIGURATION
     
     func configureNavigation()
     {
@@ -27,6 +51,8 @@ class homeVC: UITableViewController
         title                   = "COUNTRIES"
     }
     
+    //-------------------------------------//
+    // MARK: - API & PERSISTENCE
     
     func fetchCountryArray()
     {
@@ -41,7 +67,6 @@ class homeVC: UITableViewController
             DispatchQueue.main.async { self?.tableView.reloadData() }
         }
     }
-    
     
     //-------------------------------------//
     // MARK: TABLEVIEW DELEGATE & DATASOURCE METHODS

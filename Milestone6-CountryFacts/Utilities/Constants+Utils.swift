@@ -15,3 +15,14 @@ enum Images
 {
     static let defaultFlag  = "blankFlag"
 }
+
+enum VideoKeys
+{
+    static let launchScreen = "launchscreen"
+    static let playerLayerName = "PlayerLayerName"
+}
+
+enum SaveKeys
+{
+    static let isFirstVisit = "FirstVisit"
+}

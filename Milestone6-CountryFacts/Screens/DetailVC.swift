@@ -12,7 +12,7 @@ class DetailVC: UIViewController, UITableViewDelegate & UITableViewDataSource
 {
     @IBOutlet var flagImageView: UIImageView!
     @IBOutlet var countryFactsTableView: UITableView!
-    var country: CountryItem!
+    var country: CountryItem! // strong reference
     var factsTableView: UITableView!
     
     internal static func instantiate(withCountryItem countryItem: CountryItem) -> DetailVC
