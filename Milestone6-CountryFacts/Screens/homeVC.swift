@@ -22,7 +22,7 @@ class homeVC: UITableViewController
     {
         super.viewDidLoad()
         PersistenceManager.isFirstVisitStatus = true
-        configureNavigation()
+        configNavigation()
     }
     
     
@@ -45,7 +45,7 @@ class homeVC: UITableViewController
     //-------------------------------------//
     // MARK: - CONFIGURATION
     
-    func configureNavigation()
+    func configNavigation()
     {
         view.backgroundColor    = .systemBackground
         title                   = "COUNTRIES"
